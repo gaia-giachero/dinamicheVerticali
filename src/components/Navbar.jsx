@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useEffectEvent } from "react";
+import '../../assets/style-navbar.css';
 
 export default function Navbar() {
   const [openIndex, setOpenIndex] = useState(null);
   const [activePage, setActivePage] = useState("");
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -30,6 +32,25 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth > 768){
+        setIsMobileOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
+  const toggleMobileMenu = (e) => {
+    e.stopPropagation();
+    setIsMobileOpen(!isMobileOpen);
+  }
+
   // VARIABILI PER STILE
   const isCertificazioniActive =
     activePage === "irata" ||
@@ -52,7 +73,19 @@ export default function Navbar() {
         />
       </a>
 
-      <ul className="menu">
+      {/* HAMBURGER BUTTON */}
+      <button
+        className={`hamburger ${isMobileOpen ? "open" : ""}`}
+        onClick={toggleMobileMenu}
+        aria-label="Apri menu"
+        aria-expanded={isMobileOpen}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul className={`menu ${isMobileOpen ? "menu-open" : ""}`}>
         {/* HOME */}
         <li className={activePage === "index" ? "active" : ""}>
           <a href="index.html">HOME</a>
@@ -93,7 +126,7 @@ export default function Navbar() {
 
         {/* NEWS */}
         <li className={activePage === "news" ? "active" : ""}>
-          <a href="news.html">NEWS</a>
+          <a href="/pages/news.html">NEWS</a>
         </li>
 
         {/* CONTATTI */}
