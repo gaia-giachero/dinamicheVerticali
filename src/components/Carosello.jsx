@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../assets/style-carosello.css";
+import "../../assets/style/style-carosello.css";
 
 // colori e articoli da modificare con il piano editoriale
 // colori da usare

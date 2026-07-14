@@ -1,5 +1,5 @@
 import { useState, useEffect, useEffectEvent } from "react";
-import '../../assets/style-navbar.css';
+import '../../assets/style/style-navbar.css';
 
 export default function Navbar() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -67,7 +67,7 @@ export default function Navbar() {
     <nav id="navbar">
       <a href="index.html">
         <img
-          src="/assets/img/logo-dinamiche-verticali-formazione.svg"
+          src="/public/img/logo-dinamiche-verticali-formazione.svg"
           alt="Dinamiche Verticali Formazione"
           width="150"
         />
