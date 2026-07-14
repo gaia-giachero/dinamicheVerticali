@@ -3,7 +3,7 @@ import "../../assets/style/style-footer.css";
 
 export default function Footer() {
     return (
-        <footer id="footer">
+        <>
             <div className="firstSection">
                 <img src="/img/privacy&policy.svg" alt="dinamiche verticali formazione" loading="lazy" />
                 <div className="contatti">
@@ -15,6 +15,6 @@ export default function Footer() {
                 </div>
             </div>
             <img src="/img/aziende.svg" alt="petzl, irata, gwo" loading="lazy" />
-        </footer>
+        </>
     );
 }
