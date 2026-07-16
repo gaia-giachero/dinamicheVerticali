@@ -5,13 +5,13 @@ import "../../assets/style/style-carosello.css";
 // colori da usare
 const colori = {
   "Fune D.Lgs. 81/08": "#3DB876",
-  GWO: "#EF546C",
-  IRATA: "#33658A",
+  "GWO": "#EF546C",
+  "IRATA": "#33658A",
   "Lavori in Quota": "#FFCD09",
-  PTI: "#212529",
-  Soccorso: "#DC3545",
+  "PTI": "#212529",
+  "Soccorso": "#DC3545",
   "Corsi accreditati": "#17BEBB",
-  Default: "#ccc",
+  "Default": "#ccc",
 };
 
 const datiArticoli = [
