@@ -67,7 +67,7 @@ export default function Navbar() {
     <nav id="navbar">
       <a href="index.html">
         <img
-          src="/public/img/logo-dinamiche-verticali-formazione.svg"
+          src="/img/logo-dinamiche-verticali-formazione.svg"
           alt="Dinamiche Verticali Formazione"
           width="150"
         />
