@@ -4,7 +4,7 @@ import "../../assets/style/style-pillar-page.css";
 const colori = {
     "Fune D.Lgs. 81/08": "#3DB876",
     "GWO": "#EF546C",
-    IRATA: "#33658A",
+    "IRATA": "#33658A",
     "Lavori in Quota": "#FFCD09",
     "PTI": "#212529",
     "Soccorso": "#DC3545",
@@ -35,16 +35,17 @@ export default function PillarPage() {
                         <div
                             className="card"
                             key={pagina.id}
-                            style={{ borderColor: bordo }}
+                            // insrisco il valore di coloreBordo in una variabile 
+                            // che andrò a riprendere nello stile
+                            style={{ "--corso-color": bordo, borderColor: bordo }}
                         >
                             <img src={`/img/corsi/${pagina.image}`} alt={pagina.titolo} />
                             <div className="card-dati">
                                 <h3>{pagina.titolo}</h3>
                                 <a
-
                                     href={`/corso/${pagina.id}`}
                                     className="btn-more"
-                                    style={{ color: bordo }}
+                                    style={{ "--corso-color": bordo, color: bordo }}
                                 >
                                     Leggi di più
                                 </a>

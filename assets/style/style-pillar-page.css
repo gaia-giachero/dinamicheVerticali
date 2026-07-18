@@ -12,10 +12,51 @@
 .card{
   display: flex;
   flex-direction: column;
-  border: 3px solid;
+  border: 3px solid var(--corso-color);
   border-radius: 12px;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-dati{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.card h3{
+  margin: 0;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.btn-more{
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid var(--corso-color);
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-more:hover {
+  background-color: var(--corso-color); 
+  color: #fff !important;
 }
