@@ -4,8 +4,10 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -59,4 +61,18 @@
 .btn-more:hover {
   background-color: var(--corso-color); 
   color: #fff !important;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    /* tablet: 2 colonne */
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    /* desktop: 3 colonne */
+    grid-template-columns: repeat(3, 1fr); 
+  }
 }
