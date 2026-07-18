@@ -20,29 +20,30 @@ const datiArticoli = [
     titolo: "PETZL ROPETRIP® UNA KERMESSE INDIMENTICABILE",
     categoria: "Fune D.Lgs. 81/08",
     data: "2026-07-13",
-    immagine: "https://picsum.photos",
+    immagine: "ropetrip.jpg",
     descrizione:
       "Condivisione e passione sono stati gli ingredienti fondamentali dell’edizione 2025 che si è rivelata un successo.",
-    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota"
+    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota",
   },
   {
     id: 2,
     titolo: "LAMPADE FRONTALI: PIXA® SI RINNOVA E ILLUMINA OGNI AMBIENTE",
     categoria: "GWO",
     data: "2026-07-12",
-    immagine: "https://picsum.photos",
+    immagine: "torcia-frontale.jpg",
     descrizione:
       "Le lampade frontali della gamma PIXA® sono da sempre fedeli compagne per gli addetti impegnati in svariati comparti lavorativi.",
-    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota"
+    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota",
   },
   {
     id: 3,
-    titolo: "IRATA",
+    titolo: "NUOVA IMBRACATURA PETZL ASTRO®",
     categoria: "IRATA",
     data: "2026-07-11",
-    immagine: "https://picsum.photos",
-    descrizione: "prova",
-    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota"
+    immagine: "imbracatura.jpeg",
+    descrizione:
+      "Comfort e praticità sono le parole chiave per descrivere ASTRO® questa imbracatura è la soluzione ideale per affrontare tutte le situazioni di lavoro ed è perfetta per garantire il massimo comfort anche nelle sospensioni prolungate grazie ai due sedili ora associati a questa gamma.",
+    riferimenti: "Soccorso, Corsi Accreditati, GWO, Lavori in Quota",
   },
 ];
 
@@ -85,23 +86,24 @@ export default function CarouselAutoplay() {
               <div
                 className="articolo-card"
                 key={articolo.id}
-                style={{ borderColor: coloreBordo }}
+                style={{
+                  "--corso-color": coloreBordo,
+                  borderColor: coloreBordo,
+                }}
               >
                 <div className="img-container">
-                  <img src="/" alt={articolo.titolo} />
+                  <img src={`/img/articoli/${articolo.immagine}`} alt={articolo.titolo} />
                 </div>
                 <div className="card-body">
                   <span className="articolo-data">{articolo.data}</span>
                   <h3>{articolo.titolo}</h3>
-                  <p>{articolo.descrizione}</p>
-                  <a
-                    href={`/corso/${articolo.id}`}
-                    className="leggi-di-piu"
-                    style={{ color: coloreBordo }}
-                  >
-                    Leggi di più
-                  </a>
-                  <p>{articolo.riferimenti}</p>
+                  <p className="descrizione">{articolo.descrizione}</p>
+                  <div className="riferimenti-riga">
+                    <p className="riferimenti-testo">{articolo.riferimenti}</p>
+                    <a href={`/corso/${articolo.id}`} className="leggi-di-piu">
+                      Leggi di più
+                    </a>
+                  </div>
                 </div>
               </div>
             );
