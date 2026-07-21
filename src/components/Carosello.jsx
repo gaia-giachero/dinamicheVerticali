@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../assets/style/style-carosello.css";
 
-// colori e articoli da modificare con il piano editoriale
 // colori da usare
 const colori = {
   "Fune D.Lgs. 81/08": "#3DB876",
@@ -19,30 +18,40 @@ const datiArticoli = [
     id: 1,
     titolo: "PETZL ROPETRIP® UNA KERMESSE INDIMENTICABILE",
     categoria: "Fune D.Lgs. 81/08",
-    data: "2026-07-13",
-    immagine: "https://picsum.photos",
+    data: "2026-09-13",
+    slug: "ropetrip",
+    imgJpg: "ropetrip.jpg",
+    imgWebP: "ropetrip.webp",
+    imgAvif: "ropetrip.avif",
     descrizione:
       "Condivisione e passione sono stati gli ingredienti fondamentali dell’edizione 2025 che si è rivelata un successo.",
-    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota"
+    riferimenti: "Corsi Accreditati, Fune D.Lgs. 81/08, Lavori in Quota",
   },
   {
     id: 2,
     titolo: "LAMPADE FRONTALI: PIXA® SI RINNOVA E ILLUMINA OGNI AMBIENTE",
     categoria: "GWO",
-    data: "2026-07-12",
-    immagine: "https://picsum.photos",
+    data: "2026-09-25",
+    slug: "pixa-lampade-frontali",
+    imgJpg: "torcia-frontale.jpg",
+    imgWebP: "torcia-frontale.webp",
+    imgAvif: "torcia-frontale.avif",
     descrizione:
       "Le lampade frontali della gamma PIXA® sono da sempre fedeli compagne per gli addetti impegnati in svariati comparti lavorativi.",
-    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota"
+    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota",
   },
   {
     id: 3,
-    titolo: "IRATA",
+    titolo: "NUOVA IMBRACATURA PETZL ASTRO®",
     categoria: "IRATA",
-    data: "2026-07-11",
-    immagine: "https://picsum.photos",
-    descrizione: "prova",
-    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota"
+    data: "2026-10-11",
+    slug: "astro-imbracatura",
+    imgJpg: "imbracatura.jpg",
+    imgWebP: "imbracatura.webp",
+    imgAvif: "imbracatura.avif",
+    descrizione:
+      "Comfort e praticità sono le parole chiave per descrivere ASTRO® questa imbracatura è la soluzione ideale per affrontare tutte le situazioni di lavoro ed è perfetta per garantire il massimo comfort anche nelle sospensioni prolungate grazie ai due sedili ora associati a questa gamma.",
+    riferimenti: "IRATA, Soccorso, Corsi Accreditati, GWO, Lavori in Quota",
   },
 ];
 
@@ -85,23 +94,45 @@ export default function CarouselAutoplay() {
               <div
                 className="articolo-card"
                 key={articolo.id}
-                style={{ borderColor: coloreBordo }}
+                style={{
+                  "--corso-color": coloreBordo,
+                  borderColor: coloreBordo,
+                }}
               >
+                {/* gestione delle immagini con jpg, webp, avif */}
                 <div className="img-container">
-                  <img src="/" alt={articolo.titolo} />
+                  <picture>
+                    {/* carica se il formato avif è supportato */}
+                    <source
+                      media="(max-width: 767px)"
+                      srcSet={`/img/articoli_copertine/${articolo.imgAvif}`}
+                    />
+                    {/* carica se il formato webp è supportato */}
+                    <source
+                      srcSet={`/img/articoli_copertine/${articolo.imgWebP}`}
+                    />
+                    {/* 
+                      carica il formato tradizionale nel caso non fossero
+                      supportati quelli precedenti 
+                    */}
+                    <img
+                      src={`/img/articoli_copertine/${articolo.imgJpg}`}
+                      alt={articolo.titolo}
+                      loading="lazy"
+                    />
+                  </picture>
                 </div>
                 <div className="card-body">
                   <span className="articolo-data">{articolo.data}</span>
                   <h3>{articolo.titolo}</h3>
-                  <p>{articolo.descrizione}</p>
-                  <a
-                    href={`/corso/${articolo.id}`}
-                    className="leggi-di-piu"
-                    style={{ color: coloreBordo }}
-                  >
-                    Leggi di più
-                  </a>
-                  <p>{articolo.riferimenti}</p>
+                  <p className="descrizione">{articolo.descrizione}</p>
+                  <div className="riferimenti-riga">
+                    <p className="riferimenti-testo">{articolo.riferimenti}</p>
+                    <a href={`/pages/articoli/${articolo.slug}.html`}
+                      className="leggi-di-piu">
+                      Leggi di più
+                    </a>
+                  </div>
                 </div>
               </div>
             );
