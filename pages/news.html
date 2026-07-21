@@ -2,24 +2,322 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sito Formazione</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sito Formazione</title>
+
+  <!-- SEO: title/description/canonical/OG da aggiungere in seguito -->
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://www.tuosito.it/news",
+          "name": "News",
+          "description": "Articoli e aggiornamenti su formazione, lavori in quota e sicurezza.",
+          "inLanguage": "it-IT",
+          "mainEntity": {
+            "@id": "https://www.tuosito.it/news#list"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://www.tuosito.it/news#list",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "BlogPosting",
+                "headline": "PETZL ROPETRIP® UNA KERMESSE INDIMENTICABILE",
+                "datePublished": "2026-07-13",
+                "url": "https://www.tuosito.it/pages/articoli/ropetrip.html"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "BlogPosting",
+                "headline": "LAMPADE FRONTALI: PIXA® SI RINNOVA",
+                "datePublished": "2026-07-12",
+                "url": "https://www.tuosito.it/pages/articoli/pixa-lampade-frontali.html"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "BlogPosting",
+                "headline": "NUOVA IMBRACATURA PETZL ASTRO®",
+                "datePublished": "2026-07-11",
+                "url": "https://www.tuosito.it/pages/articoli/astro-imbracatura.html"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.tuosito.it/news#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quali tipi di articoli sono presenti nella sezione News?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nella sezione News trovi articoli su formazione, sicurezza sul lavoro, lavori in quota e aggiornamenti sui corsi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Gli articoli vengono aggiornati frequentemente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì, la sezione viene aggiornata regolarmente con nuovi contenuti e novità dal settore."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso approfondire un articolo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Certo, ogni articolo include un link per leggere il contenuto completo e ottenere maggiori dettagli."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.dvformazione.it/#organization",
+      "name": "Dinamiche Verticali Formazione Srl",
+      "url": "https://www.dvformazione.it/",
+      "logo": "https://www.dvformazione.it/public/img/logo-dinamiche-verticali-formazione.svg",
+      "description": "Centro di formazione certificato specializzato in lavori in quota, sicurezza sul lavoro, corsi IRATA, GWO e Petzl Technical Institute.",
+      "email": "formazione@petzl.it",
+      "telephone": "+39 011 27 32 500",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via G. Battista Feroggio, 54",
+        "addressLocality": "Torino",
+        "postalCode": "10151",
+        "addressCountry": "IT"
+      },
+      "foundingDate": "2007",
+      "areaServed": "IT",
+      "sameAs": [
+        "https://it.linkedin.com/company/dinamiche-verticali-srl"
+      ],
+      "department": {
+        "@type": "EducationalOrganization",
+        "name": "Petzl Technical Institute Italy",
+        "description": "Centro ufficiale Petzl Technical Institute per la formazione tecnica su DPI e lavori in quota."
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Formazione lavori in quota",
+            "description": "Corsi teorico-pratici per lavori in altezza e sicurezza."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Certificazione IRATA",
+            "description": "Formazione per operatori su fune certificata IRATA."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Formazione GWO",
+            "description": "Corsi certificati per il settore eolico secondo standard GWO."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Formazione DPI anticaduta",
+            "description": "Corsi su utilizzo, ispezione e gestione dei dispositivi di protezione individuale."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/style/style-navbar.css">
+  <link rel="stylesheet" href="../assets/style/style-campo-ricerca.css">
+  <link rel="stylesheet" href="../assets/style/style-carosello.css">
+  <link rel="stylesheet" href="../assets/style/style-pillar-page.css">
+  <link rel="stylesheet" href="../assets/style/style-footer.css">
 </head>
 
 <body>
-    <nav id="menu"></nav>
 
-    <main>
-        <div id="carosello"></div>
-        <div id="ricerca"></div>
-        <div id="pillar-page"></div>
-    </main>
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar">
+    <a href="../index.html">
+      <img src="../public/img/logo-dinamiche-verticali-formazione.svg" alt="Dinamiche Verticali Formazione"
+        width="150" />
+    </a>
 
-    <footer id="footer"></footer>
+    <!-- HAMBURGER BUTTON (mobile) -->
+    <button class="hamburger" aria-label="Apri menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    <!-- React entry -->
-    <script type="module" src="/src/main.jsx"></script>
+    <ul class="menu">
+      <!-- HOME -->
+      <li>
+        <a href="../index.html">HOME</a>
+      </li>
+
+      <!-- CERTIFICAZIONI -->
+      <li class="dropdown">
+        <span>CERTIFICAZIONI ⌵</span>
+        <ul class="dropdown-menu">
+          <li><a href="#!">IRATA</a></li>
+          <li><a href="#!">GWO</a></li>
+          <li><a href="#!">PTI</a></li>
+        </ul>
+      </li>
+
+      <!-- ALTRI CORSI -->
+      <li class="dropdown">
+        <span>ALTRI CORSI ⌵</span>
+        <ul class="dropdown-menu">
+          <li><a href="#!">FUNE D.LGS. 81/08</a></li>
+          <li><a href="#!">LAVORI IN QUOTA</a></li>
+          <li><a href="#!">SOCCORSO</a></li>
+          <li><a href="#!">CORSI ACCREDITATI</a></li>
+        </ul>
+      </li>
+
+      <!-- NEWS -->
+      <li class="active">
+        <a href="news.html">NEWS</a>
+      </li>
+
+      <!-- CONTATTI -->
+      <li>
+        <a href="#!">CONTATTI</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ============ CAROSELLO (widget React) ============ -->
+    <div id="carosello"></div>
+
+    <!-- ============ CAMPO RICERCA (statico, senza logica per adesso) ============ -->
+    <div class="campo-ricerca">
+      <input type="text" class="input" placeholder="Cerca l'articolo che fa per te" />
+    </div>
+
+    <!-- ============ PILLAR PAGE ============ -->
+    <div class="grid-container">
+
+      <div class="card cat-fune">
+        <img src="../public/img/corsi/fune.webp" alt="Fune D.Lgs. 81/08" />
+        <div class="card-dati">
+          <h3>Fune D.Lgs. 81/08</h3>
+          <a href="./pillarPage/pillarPage-fune.html" class="btn-more">Leggi di più</a>
+        </div>
+      </div>
+
+      <div class="card cat-gwo">
+        <img src="../public/img/corsi/gwo.webp" alt="GWO" />
+        <div class="card-dati">
+          <h3>GWO</h3>
+          <a href="./pillarPage/pillarPage-gwo.html" class="btn-more">Leggi di più</a>
+        </div>
+      </div>
+
+      <div class="card cat-irata">
+        <img src="../public/img/corsi/irata.webp" alt="IRATA" />
+        <div class="card-dati">
+          <h3>IRATA</h3>
+          <a href="./pillarPage/pillarPage-irata.html" class="btn-more">Leggi di più</a>
+        </div>
+      </div>
+
+      <div class="card cat-quota">
+        <img src="../public/img/corsi/lavori-in-quota.webp" alt="Lavori in Quota" />
+        <div class="card-dati">
+          <h3>Lavori in Quota</h3>
+          <a href="#!" class="btn-more">Leggi di più</a>
+        </div>
+      </div>
+
+      <div class="card cat-pti">
+        <img src="../public/img/corsi/pti.webp" alt="PTI" />
+        <div class="card-dati">
+          <h3>PTI</h3>
+          <a href="#!" class="btn-more">Leggi di più</a>
+        </div>
+      </div>
+
+      <div class="card cat-soccorso">
+        <img src="../public/img/corsi/itra.webp" alt="Soccorso" />
+        <div class="card-dati">
+          <h3>Soccorso</h3>
+          <a href="#!" class="btn-more">Leggi di più</a>
+        </div>
+      </div>
+
+      <div class="card cat-accreditati">
+        <img src="../public/img/corsi/corsi-accreditati.webp" alt="Corsi accreditati" />
+        <div class="card-dati">
+          <h3>Corsi accreditati</h3>
+          <a href="#!" class="btn-more">Leggi di più</a>
+        </div>
+      </div>
+
+      <div class="card cat-tutti">
+        <img src="../public/img/corsi/corsi-accreditati.webp" alt="Tutti i corsi" />
+        <div class="card-dati">
+          <h3>Tutti i corsi</h3>
+          <a href="./pillarPage/pillarPage-tutti.html" class="btn-more">Leggi di più</a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer">
+    <div class="firstSection">
+      <img src="../public/img/privacy&policy.svg" alt="Dinamiche Verticali Formazione" loading="lazy" />
+      <div class="contatti">
+        <p>Contattaci</p>
+        <p>+39 011 27 32 500</p>
+        <p>(Lun-Ven dalle 08:30 alle 17:30)</p>
+        <p>formazione@petzl.it</p>
+        <p>Via G. Battista Feroggio, 54, 10151 Torino</p>
+      </div>
+    </div>
+    <img src="../public/img/aziende.svg" alt="petzl, irata, gwo" loading="lazy" />
+  </footer>
+
+  <!-- JS per l'interazione della navbar (hamburger, dropdown) -->
+  <script type="module" src="../assets/js/navbar.js"></script>
+
+  <!-- React solo per il carosello -->
+  <script type="module" src="../src/main.jsx"></script>
 </body>
 
 </html>
