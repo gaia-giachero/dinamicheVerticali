@@ -66,7 +66,11 @@
   font-size: 0.9rem;
   color: #555;
   margin: 0 0 20px 0;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 89d30ebb69f548b2c85c08866ba47eaf89df4963
   /* troncamento a 3 righe con ... */
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -147,13 +151,21 @@
     display: none;
   }
 
+<<<<<<< HEAD
   .riferimenti-riga {
+=======
+  .riferimenti-riga{
+>>>>>>> 89d30ebb69f548b2c85c08866ba47eaf89df4963
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
 
+<<<<<<< HEAD
   .leggi-di-piu {
+=======
+  .leggi-di-piu{
+>>>>>>> 89d30ebb69f548b2c85c08866ba47eaf89df4963
     align-self: flex-start;
   }
 }
