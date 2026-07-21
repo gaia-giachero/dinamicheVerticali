@@ -1,0 +1,76 @@
+:root {
+    --primary-color: #EA5C0C;
+}
+
+/* ============ CONTENITORE PAGINA PILLAR ============ */
+.pillar-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ============ BREADCRUMB ============ */
+.pillar-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 24px;
+}
+
+.pillar-breadcrumb a {
+    color: #777;
+    text-decoration: none;
+}
+
+.pillar-breadcrumb a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.pillar-breadcrumb [aria-current="page"] {
+    color: #222;
+    font-weight: bold;
+}
+
+/* ============ HEADER DI CATEGORIA ============ */
+.pillar-header {
+    margin: 0 0 40px 0;
+}
+
+.pillar-title {
+    font-size: 2rem;
+    color: #111;
+    margin: 0 0 12px 0;
+}
+
+.pillar-intro {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* ============ GRIGLIA ARTICOLI ============ */
+/* Le card usano lo stile di style-carosello.css, 
+    unico cambiamento la disposizione a griglia*/
+.pillar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (min-width: 600px) {
+    .pillar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .pillar-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,245 @@
+/* ============ LAYOUT GENERALE ============ */
+.calendario-sezione {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ============ SIDEBAR FILTRI ============ */
+.filtri-corsi {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* menu "a tendina" solo su mobile */
+.filtri-mobile-toggle {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #222;
+    cursor: pointer;
+}
+
+.filtri-mobile-freccia {
+    transition: transform 0.2s ease;
+}
+
+.filtri-corsi.aperto .filtri-mobile-freccia {
+    transform: rotate(180deg);
+}
+
+.filtri-corpo {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtri-titolo {
+    font-size: 1rem;
+    color: #222;
+    margin: 0 0 12px 0;
+}
+
+.filtri-toggle-tutti {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--primary-color, #EA5C0C);
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.filtri-toggle-tutti:hover {
+    text-decoration: underline;
+}
+
+.filtri-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* tolto il quadratio della checkbox */
+.filtro-voce input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.filtro-voce label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.filtro-pallino {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: opacity 0.15s ease;
+}
+
+.filtro-testo {
+    line-height: 1.3;
+    color: #333;
+    transition: color 0.15s ease;
+}
+
+/* stato "non selezionato" */
+.filtro-voce label:has(input:not(:checked)) .filtro-testo {
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+.filtro-voce label:has(input:not(:checked)) .filtro-pallino {
+    opacity: 0.3;
+}
+
+/* ============ BOX CALENDARIO ============ */
+.calendario-box {
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+}
+
+.calendario-titolo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--primary-color, #EA5C0C);
+    margin: 0 0 8px 0;
+}
+
+.calendario-sottotitolo {
+    color: #777;
+    margin: 0 0 24px 0;
+}
+
+.calendario-sottotitolo #conteggio-corsi {
+    color: var(--primary-color, #EA5C0C);
+    font-weight: bold;
+}
+
+/* ============ OVERRIDE FULLCALENDAR ============ */
+#calendar {
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+/* eventi */
+#calendar .fc-event {
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    padding: 2px 6px;
+    transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+#calendar .fc-event:hover {
+    filter: brightness(0.9);
+    transform: translateY(-1px);
+}
+
+/* titolo del mese/toolbar */
+#calendar .fc-toolbar-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* pulsanti (oggi, mese, lista, prev/next) */
+#calendar .fc-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    text-transform: capitalize;
+    box-shadow: none;
+}
+
+#calendar .fc-button:hover {
+    background-color: var(--primary-color, #EA5C0C);
+    border-color: var(--primary-color, #EA5C0C);
+    color: #fff;
+}
+
+#calendar .fc-button-active,
+#calendar .fc-button-primary:not(:disabled).fc-button-active {
+    background-color: var(--primary-color, #EA5C0C) !important;
+    border-color: var(--primary-color, #EA5C0C) !important;
+    color: #fff !important;
+}
+
+#filtri-slot-desktop {
+    flex: 0 0 220px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+    .calendario-sezione {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #filtri-slot-desktop {
+        display: none;
+    }
+
+    #filtri-slot-mobile {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .calendario-box {
+        max-width: 100%;
+    }
+
+    .filtri-mobile-toggle {
+        display: flex;
+    }
+
+    .filtri-corpo {
+        display: none;
+        margin-top: 16px;
+    }
+
+    .filtri-corsi.aperto .filtri-corpo {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendario-titolo {
+        font-size: 1.4rem;
+    }
+
+    #calendar .fc-toolbar {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

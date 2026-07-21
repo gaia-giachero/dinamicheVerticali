@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #EA5C0C;
+    --primary-color: #EA5C0C;
 }
 
-.campo-ricerca{
+.campo-ricerca {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
     padding: 20px;
 }
 
-.campo-ricerca .input{
+.campo-ricerca .input {
     width: 100%;
     /* larghezza massima per desktop */
     max-width: 500px;
@@ -24,9 +24,9 @@
     transition: background-color 0.2s ease;
 }
 
-/* RESPONSIVE: input più piccolo su mobile */
-@media (max-width: 768px){
-    .campo-ricerca .input{
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    .campo-ricerca .input {
         font-size: 0.9rem;
         padding: 10px 14px;
         max-width: 100%;

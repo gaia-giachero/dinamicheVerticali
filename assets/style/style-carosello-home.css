@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #EA5C0C;
+}
+
+.carosello {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+    /* durante il drag evita la selezione di testo/immagini */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.carosello-track {
+    display: flex;
+    touch-action: pan-y;
+    cursor: grab;
+}
+
+.carosello-track.trascinamento {
+    cursor: grabbing;
+}
+
+.carosello-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.carosello-slide img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
+/* ============ FRECCE ============ */
+.carosello-freccia {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #222;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    z-index: 2;
+}
+
+.carosello-freccia:hover {
+    background-color: #fff;
+}
+
+.carosello-prev {
+    left: 16px;
+}
+
+.carosello-next {
+    right: 16px;
+}
+
+/* ============ DOTS ============ */
+.carosello-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.carosello-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carosello-dot:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carosello-dot.attivo {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 600px) {
+    .carosello {
+        margin: 0 16px;
+    }
+
+    .carosello-freccia {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+    }
+}

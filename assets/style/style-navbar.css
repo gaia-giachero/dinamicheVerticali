@@ -1,4 +1,4 @@
-:root{
+:root {
   --primary-color: #EA5C0C;
 }
 
@@ -9,7 +9,6 @@
 }
 
 /* USARE LA MISURA DEL FONT IN rem */
-/* VOCE altri corsi DA SISTEMARE AL CLICK CHE SI SPOSTA */
 
 body {
   font-family: Arial;
@@ -39,15 +38,15 @@ body {
   display: block;
 }
 
-.menu > li > a,
-.menu > li > span {
+.menu>li>a,
+.menu>li>span {
   padding: 10px;
   display: block;
   color: #000;
   text-decoration: none;
 }
 
-.menu > li > span {
+.menu>li>span {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -60,6 +59,7 @@ body {
 
 /* menu dropdown */
 .dropdown-menu {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -73,6 +73,10 @@ body {
   border-radius: 10px;
 }
 
+.dropdown.open>.dropdown-menu {
+  display: block;
+}
+
 .dropdown-menu li {
   width: 100%;
 }
@@ -84,7 +88,8 @@ body {
 
 .menu a:hover,
 .menu li.active>a,
-.dropdown.active>span {
+.dropdown.active>span,
+.dropdown.open>span {
   background-color: var(--primary-color);
   color: white;
   font-weight: bold;
@@ -134,16 +139,16 @@ body {
   transform: translateY(-8.5px) rotate(-45deg);
 }
 
-/* MOBILE */
+/* ============ RESPONSIVE ============ */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
-  
+
   #navbar {
     position: relative;
   }
-  
+
   .menu {
     display: flex;
     flex-direction: column;
@@ -152,32 +157,32 @@ body {
     top: 0;
     right: 0;
     height: 100vh;
-    background-color: #fff; 
+    background-color: #fff;
     z-index: 1000;
     padding: 6em 2em 0 5em;
-    
+
     transform: translate(200%);
     transition: transform 0.3s ease;
-    
+
     overflow-y: auto;
     border: 1px solid black;
   }
-  
+
   .menu.menu-open {
     transform: translateX(0);
   }
-  
+
   .menu li {
     text-align: right;
   }
-  
+
   .dropdown-menu {
     position: static;
     top: auto;
     left: auto;
   }
 
-  .dropdown-menu li{
+  .dropdown-menu li {
     text-align: right;
   }
 }

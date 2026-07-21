@@ -1,0 +1,271 @@
+:root {
+  --primary-color: #EA5C0C;
+}
+
+/* ============ CONTENITORE GENERALE ============ */
+.articolo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ============ BREADCRUMB ============ */
+.articolo-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 24px;
+}
+
+.articolo-breadcrumb a {
+  color: #777;
+  text-decoration: none;
+}
+
+.articolo-breadcrumb a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.articolo-breadcrumb [aria-current="page"] {
+  color: #222;
+  font-weight: bold;
+}
+
+/* ============ HEADER ARTICOLO ============ */
+.articolo-header {
+  margin-bottom: 24px;
+}
+
+.articolo-categoria {
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+}
+
+.articolo-titolo {
+  font-size: 1.8rem;
+  line-height: 1.25;
+  color: #111;
+  margin: 0 0 12px 0;
+}
+
+.articolo-data {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* ============ PARAGRAFO INTRODUTTIVO ============ */
+.articolo-lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 600;
+  margin: 0 0 32px 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ============ SEZIONI DEL CORPO ARTICOLO ============ */
+.articolo-sezione {
+  margin-bottom: 40px;
+}
+
+.articolo-sezione-titolo {
+  font-size: 1.3rem;
+  color: #111;
+  margin: 0 0 16px 0;
+}
+
+.articolo-immagine {
+  margin: 0 0 20px 0;
+}
+
+.articolo-immagine img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.articolo-testo p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.articolo-testo p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============ SCHEDA INTRODUTTIVA (riquadro riassuntivo) ============ */
+.scheda-introduttiva {
+  background-color: #fdf1e9;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 40px 0;
+}
+
+.scheda-introduttiva-titolo {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+  margin: 0 0 8px 0;
+}
+
+.scheda-introduttiva-testo {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ============ ARTICOLI CORRELATI ============ */
+.articoli-correlati {
+  margin: 48px 0 32px 0;
+  padding-top: 32px;
+  border-top: 1px solid #eee;
+}
+
+.articoli-correlati-titolo {
+  font-size: 1.2rem;
+  color: #111;
+  margin: 0 0 20px 0;
+}
+
+.articoli-correlati-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.articolo-correlato {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 2px solid var(--corso-color, #ccc);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.articolo-correlato:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.articolo-correlato img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.articolo-correlato-dati {
+  padding: 14px 16px;
+}
+
+.articolo-correlato-categoria {
+  color: var(--corso-color, #EA5C0C);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px 0;
+}
+
+.articolo-correlato-titolo {
+  font-size: 1rem;
+  line-height: 1.35;
+  color: #111;
+  margin: 0;
+}
+
+/* colori per categoria */
+.articolo-correlato.cat-fune {
+  --corso-color: #3DB876;
+}
+
+.articolo-correlato.cat-gwo {
+  --corso-color: #EF546C;
+}
+
+.articolo-correlato.cat-irata {
+  --corso-color: #33658A;
+}
+
+.articolo-correlato.cat-quota {
+  --corso-color: #FFCD09;
+}
+
+.articolo-correlato.cat-pti {
+  --corso-color: #212529;
+}
+
+.articolo-correlato.cat-soccorso {
+  --corso-color: #DC3545;
+}
+
+.articolo-correlato.cat-accreditati {
+  --corso-color: #17BEBB;
+}
+
+/* ============ TORNA ALLE NEWS ============ */
+.articolo-torna-news {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+.articolo-torna-news:hover {
+  text-decoration: underline;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (min-width: 768px) {
+  .articolo-titolo {
+    font-size: 2.2rem;
+  }
+
+  .articolo-immagine img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .articolo {
+    padding: 16px;
+  }
+
+  .articolo-lead {
+    font-size: 1rem;
+  }
+
+  .articolo-immagine img {
+    height: 220px;
+  }
+}
+
+@media (min-width: 600px) {
+  .articoli-correlati-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
