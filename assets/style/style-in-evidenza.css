@@ -1,0 +1,151 @@
+:root {
+    --primary-color: #EA5C0C;
+}
+
+.in-evidenza {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.in-evidenza-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.in-evidenza-titolo {
+    font-size: 1.4rem;
+    color: #111;
+    margin: 0;
+}
+
+.in-evidenza-link {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.in-evidenza-link:hover {
+    text-decoration: underline;
+}
+
+.in-evidenza-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ============ CARD SINGOLO CORSO ============ */
+.corso-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.corso-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.corso-card-img {
+    position: relative;
+}
+
+.corso-card-img img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* pallino colorato per categoria */
+.corso-card-pallino {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--corso-color, #ccc);
+    border: 3px solid #fff;
+}
+
+.corso-card-dati {
+    padding: 16px 18px 20px 18px;
+}
+
+.corso-card-tag {
+    display: block;
+    width: 70px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #d9d9d9;
+    margin-bottom: 12px;
+}
+
+.corso-card-titolo {
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #111;
+    margin: 0 0 8px 0;
+}
+
+.corso-card-testo {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 14px 0;
+}
+
+.corso-card-link {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.corso-card-link:hover {
+    text-decoration: underline;
+}
+
+/* colori per categoria */
+.corso-card.cat-quota {
+    --corso-color: #FFCD09;
+}
+
+.corso-card.cat-gwo {
+    --corso-color: #EF546C;
+}
+
+.corso-card.cat-accreditati {
+    --corso-color: #17BEBB;
+}
+
+.corso-card.cat-fune {
+    --corso-color: #3DB876;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+    .in-evidenza-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .in-evidenza-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .in-evidenza-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
