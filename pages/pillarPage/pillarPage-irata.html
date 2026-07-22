@@ -5,25 +5,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ============ SEO ============ -->
+    <!-- FAVICON -->
+    <link rel="icon" href="../../public/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="../../public/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../../public/img/apple-touch-icon.png" />
+
+    <!-- META TAGS PRINCIPALI -->
     <title>Articoli e news su IRATA | Dinamiche Verticali Formazione</title>
+    <meta name="title" content="Articoli e news su IRATA | Dinamiche Verticali Formazione" />
     <meta name="description"
         content="Tutte le news, gli aggiornamenti e gli articoli dedicati alla formazione su IRATA: normativa, corsi ed eventi per operatori e aziende." />
+
+    <!-- serve per indicizzare la pagina e seguire i link della pagina -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Per adesso URL inventato, nella realtà ci sarebbe l'URL reale
+        (per far capire al motore di ricerca che questa è la pagina da indicizzare) -->
     <link rel="canonical" href="https://www.dinamicheverticaliformazione.it/pages/pillarPage/pillarPage-irata.html" />
 
+    <!-- sito monolingua: dichiariamo comunque alternate/x-default sulla stessa pagina,
+         così il motore di ricerca non la scambia per una copia mancante di traduzione -->
+    <link rel="alternate" hreflang="it"
+        href="https://www.dinamicheverticaliformazione.it/pages/pillarPage/pillarPage-irata.html" />
+    <link rel="alternate" hreflang="x-default"
+        href="https://www.dinamicheverticaliformazione.it/pages/pillarPage/pillarPage-irata.html" />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dinamiche Verticali Formazione" />
+    <!-- Per adesso URL inventato, nella realtà ci sarebbe l'URL reale -->
+    <meta property="og:url"
+        content="https://www.dinamicheverticaliformazione.it/pages/pillarPage/pillarPage-irata.html" />
     <meta property="og:title" content="Articoli e news su IRATA" />
     <meta property="og:description"
         content="Tutte le news, gli aggiornamenti e gli articoli dedicati alla formazione su IRATA: normativa, corsi ed eventi per operatori e aziende." />
-    <meta property="og:url"
+    <!-- immagine dedicata 1200x630px, non solo il logo -->
+    <meta property="og:image"
+        content="https://www.dinamicheverticaliformazione.it/public/img/articoli_copertine/imbracatura.jpg" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- X (Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url"
         content="https://www.dinamicheverticaliformazione.it/pages/pillarPage/pillarPage-irata.html" />
+    <meta name="twitter:title" content="Articoli e news su IRATA" />
+    <meta name="twitter:description"
+        content="Tutte le news, gli aggiornamenti e gli articoli dedicati alla formazione su IRATA: normativa, corsi ed eventi per operatori e aziende." />
+    <meta name="twitter:image"
+        content="https://www.dinamicheverticaliformazione.it/public/img/articoli_copertine/imbracatura.jpg" />
 
-    <meta name="twitter:card" content="summary" />
-
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" href="../../assets/style/style-navbar.css">
-    <!-- style-carosello.css fornisce lo stile della card (.articolo-card, .img-container, .card-body, ecc.) -->
     <link rel="stylesheet" href="../../assets/style/style-carosello.css">
-    <!-- style-articoli-grid.css gestisce solo il layout della pagina pillar (wrapper, breadcrumb, header, griglia) -->
     <link rel="stylesheet" href="../../assets/style/style-articoli-grid.css">
     <link rel="stylesheet" href="../../assets/style/style-footer.css">
 </head>
@@ -32,7 +65,7 @@
 
     <!-- ============ NAVBAR ============ -->
     <nav id="navbar">
-        <a href="../../index.html">
+        <a href="../../index.html" title="Torna alla home di Dinamiche Verticali Formazione">
             <img src="../../public/img/logo-dinamiche-verticali-formazione.svg" alt="Dinamiche Verticali Formazione"
                 width="150" />
         </a>
@@ -45,35 +78,36 @@
 
         <ul class="menu">
             <li>
-                <a href="../../index.html">HOME</a>
+                <a href="../../index.html" title="Home - Dinamiche Verticali Formazione">HOME</a>
+            </li>
+
+            <!-- CERTIFICAZIONI: attiva perché questa pagina appartiene alla categoria IRATA -->
+            <li class="dropdown active">
+                <span>CERTIFICAZIONI ⌵</span>
+                <ul class="dropdown-menu">
+                    <li><a href="../corsi/irata.html" title="Certificazione IRATA L1/L2/L3">IRATA</a></li>
+                    <li><a href="pillarPage-gwo.html" title="Articoli e news su GWO">GWO</a></li>
+                    <li><a href="#!" title="Tutti i corsi PTI">PTI</a></li>
+                </ul>
             </li>
 
             <li class="dropdown">
-                <span>CERTIFICAZIONI ⌵</span>
-                <ul class="dropdown-menu">
-                    <li><a href="#!">IRATA</a></li>
-                    <li><a href="#!">GWO</a></li>
-                    <li><a href="#!">PTI</a></li>
-                </ul>
-            </li>
-
-            <!-- ALTRI CORSI: attiva perché questa pagina appartiene alla categoria FUNE -->
-            <li class="dropdown active">
                 <span>ALTRI CORSI ⌵</span>
                 <ul class="dropdown-menu">
-                    <li><a href="pillarPage-fune.html">IRATA</a></li>
-                    <li><a href="#!">LAVORI IN QUOTA</a></li>
-                    <li><a href="#!">SOCCORSO</a></li>
-                    <li><a href="#!">CORSI ACCREDITATI</a></li>
+                    <li><a href="pillarPage-fune.html" title="Articoli e news su Fune D.Lgs. 81/08">FUNE D.LGS.
+                            81/08</a></li>
+                    <li><a href="#!" title="Corsi Lavori in Quota">LAVORI IN QUOTA</a></li>
+                    <li><a href="#!" title="Corsi di Soccorso">SOCCORSO</a></li>
+                    <li><a href="#!" title="Corsi Accreditati">CORSI ACCREDITATI</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="../../pages/news.html">NEWS</a>
+                <a href="../../pages/news.html" title="News ed aggiornamenti">NEWS</a>
             </li>
 
             <li>
-                <a href="#!">CONTATTI</a>
+                <a href="#!" title="Contatti Dinamiche Verticali Formazione">CONTATTI</a>
             </li>
         </ul>
     </nav>
@@ -82,7 +116,7 @@
 
         <!-- breadcrumb: utile per SEO e orientamento dell'utente -->
         <nav class="pillar-breadcrumb" aria-label="Breadcrumb">
-            <a href="../../pages/news.html">News</a>
+            <a href="../../pages/news.html" title="Torna alle News">News</a>
             <span aria-hidden="true">/</span>
             <span aria-current="page">IRATA</span>
         </nav>
@@ -95,9 +129,7 @@
         </header>
 
         <div class="pillar-grid">
-
             <!-- ============ CARD ARTICOLO ============ -->
-            <!-- --corso-color imposta il colore della categoria, stesso meccanismo usato dal carosello -->
             <!-- ARTICOLO 1 -->
             <div class="articolo-card" style="--corso-color: #33658A">
 
@@ -127,7 +159,8 @@
                     </p>
                     <div class="riferimenti-riga">
                         <p class="riferimenti-testo">IRATA, Soccorso, Corsi Accreditati, GWO, Lavori in Quota</p>
-                        <a href="../articoli/astro-imbracatura.html" class="leggi-di-piu">
+                        <a href="../articoli/astro-imbracatura.html" class="leggi-di-piu"
+                            title="Leggi l'articolo sull'imbracatura ASTRO®">
                             Leggi l'articolo
                         </a>
                     </div>
@@ -140,7 +173,7 @@
     <!-- ============ FOOTER ============ -->
     <footer id="footer">
         <div class="firstSection">
-            <img src="../../public/img/privacy&policy.svg" alt="Dinamiche Verticali Formazione" loading="lazy" />
+            <img src="../../public/img/privacy&policy.svg" alt="Privacy e Policy" loading="lazy" />
             <div class="contatti">
                 <p>Contattaci</p>
                 <p>+39 011 27 32 500</p>
@@ -149,7 +182,8 @@
                 <p>Via G. Battista Feroggio, 54, 10151 Torino</p>
             </div>
         </div>
-        <img src="../../public/img/aziende.svg" alt="petzl, irata, gwo" loading="lazy" />
+        <img src="../../public/img/aziende.svg" alt="Loghi partner e certificazioni: Petzl, IRATA, GWO"
+            loading="lazy" />
     </footer>
 
     <script type="module" src="../../assets/js/navbar.js"></script>
