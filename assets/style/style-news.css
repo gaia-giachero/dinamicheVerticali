@@ -2,6 +2,10 @@
   --primary-color: #EA5C0C;
 }
 
+.pillar-titolo{
+  text-align: center;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
