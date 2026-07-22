@@ -1,0 +1,209 @@
+:root {
+  --corso-blu: #33658A;
+  --corso-grigio-testo: #696969;
+  --corso-grigio-placeholder: #878787;
+  --corso-sfondo-campo: #DFDFDF;
+}
+
+.corso-pagina {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  color: #111;
+}
+
+/* ============ HERO ============ */
+.corso-hero {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.corso-hero img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.corso-titolo {
+  text-align: center;
+  color: var(--corso-blu);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 16px 0 0 0;
+}
+
+/* ============ INTRO ============ */
+.corso-intro {
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+  text-align: center;
+  color: var(--corso-grigio-testo);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+/* ============ OBIETTIVI + INFO/ALLOGGI ============ */
+.corso-dettagli {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 900px) {
+  .corso-dettagli {
+    grid-template-columns: 1fr 1px 1fr;
+  }
+
+  .corso-dettagli::before {
+    content: "";
+    grid-column: 2;
+    grid-row: 1 / -1;
+    background: #ddd;
+  }
+}
+
+.corso-dettagli h2 {
+  color: var(--corso-blu);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.corso-obiettivi-intro {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.corso-obiettivi-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  line-height: 1.7;
+}
+
+.corso-info-alloggi {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.corso-info-testo {
+  text-align: center;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.corso-info-testo a {
+  color: var(--corso-blu);
+}
+
+.corso-indirizzi {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.corso-indirizzo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.corso-indirizzo img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.corso-indirizzo a {
+  color: var(--corso-blu);
+}
+
+/* ============ FORM ISCRIZIONE ============ */
+.corso-iscrizione {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.corso-iscrizione-titolo {
+  color: var(--corso-blu);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 32px 0;
+}
+
+.corso-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.corso-form-riga {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .corso-form-riga {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.corso-form-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.corso-form-campo label {
+  font-weight: 700;
+}
+
+.corso-form-campo input {
+  background: var(--corso-sfondo-campo);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.corso-form-campo input::placeholder {
+  color: var(--corso-grigio-placeholder);
+}
+
+.corso-form-invio {
+  align-self: center;
+  background: var(--corso-blu);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.corso-form-invio:hover {
+  background: #274d69;
+}
