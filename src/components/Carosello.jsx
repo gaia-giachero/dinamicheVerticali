@@ -18,7 +18,6 @@ const datiArticoli = [
     id: 1,
     titolo: "PETZL ROPETRIP® UNA KERMESSE INDIMENTICABILE",
     categoria: "Fune D.Lgs. 81/08",
-<<<<<<< HEAD
     data: "2026-09-13",
     slug: "ropetrip",
     imgJpg: "ropetrip.jpg",
@@ -27,28 +26,16 @@ const datiArticoli = [
     descrizione:
       "Condivisione e passione sono stati gli ingredienti fondamentali dell’edizione 2025 che si è rivelata un successo.",
     riferimenti: "Corsi Accreditati, Fune D.Lgs. 81/08, Lavori in Quota",
-=======
-    data: "2026-07-13",
-    immagine: "ropetrip.jpg",
-    descrizione:
-      "Condivisione e passione sono stati gli ingredienti fondamentali dell’edizione 2025 che si è rivelata un successo.",
-    riferimenti: "Corsi Accreditati, GWO, Lavori in Quota",
->>>>>>> 89d30ebb69f548b2c85c08866ba47eaf89df4963
   },
   {
     id: 2,
     titolo: "LAMPADE FRONTALI: PIXA® SI RINNOVA E ILLUMINA OGNI AMBIENTE",
     categoria: "GWO",
-<<<<<<< HEAD
     data: "2026-09-25",
     slug: "pixa-lampade-frontali",
     imgJpg: "torcia-frontale.jpg",
     imgWebP: "torcia-frontale.webp",
     imgAvif: "torcia-frontale.avif",
-=======
-    data: "2026-07-12",
-    immagine: "torcia-frontale.jpg",
->>>>>>> 89d30ebb69f548b2c85c08866ba47eaf89df4963
     descrizione:
       "Le lampade frontali della gamma PIXA® sono da sempre fedeli compagne per gli addetti impegnati in svariati comparti lavorativi.",
     riferimenti: "Corsi Accreditati, GWO, Lavori in Quota",
@@ -57,7 +44,6 @@ const datiArticoli = [
     id: 3,
     titolo: "NUOVA IMBRACATURA PETZL ASTRO®",
     categoria: "IRATA",
-<<<<<<< HEAD
     data: "2026-10-11",
     slug: "astro-imbracatura",
     imgJpg: "imbracatura.jpg",
@@ -66,13 +52,6 @@ const datiArticoli = [
     descrizione:
       "Comfort e praticità sono le parole chiave per descrivere ASTRO® questa imbracatura è la soluzione ideale per affrontare tutte le situazioni di lavoro ed è perfetta per garantire il massimo comfort anche nelle sospensioni prolungate grazie ai due sedili ora associati a questa gamma.",
     riferimenti: "IRATA, Soccorso, Corsi Accreditati, GWO, Lavori in Quota",
-=======
-    data: "2026-07-11",
-    immagine: "imbracatura.jpeg",
-    descrizione:
-      "Comfort e praticità sono le parole chiave per descrivere ASTRO® questa imbracatura è la soluzione ideale per affrontare tutte le situazioni di lavoro ed è perfetta per garantire il massimo comfort anche nelle sospensioni prolungate grazie ai due sedili ora associati a questa gamma.",
-    riferimenti: "Soccorso, Corsi Accreditati, GWO, Lavori in Quota",
->>>>>>> 89d30ebb69f548b2c85c08866ba47eaf89df4963
   },
 ];
 
@@ -122,7 +101,6 @@ export default function CarouselAutoplay() {
               >
                 {/* gestione delle immagini con jpg, webp, avif */}
                 <div className="img-container">
-<<<<<<< HEAD
                   <picture>
                     {/* carica se il formato avif è supportato */}
                     <source
@@ -143,9 +121,6 @@ export default function CarouselAutoplay() {
                       loading="lazy"
                     />
                   </picture>
-=======
-                  <img src={`/img/articoli/${articolo.immagine}`} alt={articolo.titolo} />
->>>>>>> 89d30ebb69f548b2c85c08866ba47eaf89df4963
                 </div>
                 <div className="card-body">
                   <span className="articolo-data">{articolo.data}</span>
@@ -153,12 +128,8 @@ export default function CarouselAutoplay() {
                   <p className="descrizione">{articolo.descrizione}</p>
                   <div className="riferimenti-riga">
                     <p className="riferimenti-testo">{articolo.riferimenti}</p>
-<<<<<<< HEAD
                     <a href={`/pages/articoli/${articolo.slug}.html`}
                       className="leggi-di-piu">
-=======
-                    <a href={`/corso/${articolo.id}`} className="leggi-di-piu">
->>>>>>> 89d30ebb69f548b2c85c08866ba47eaf89df4963
                       Leggi di più
                     </a>
                   </div>
