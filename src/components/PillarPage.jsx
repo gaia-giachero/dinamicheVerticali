@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../assets/style/style-pillar-page.css";
+import "../../assets/style/style-news.css";
 
 const colori = {
     "Fune D.Lgs. 81/08": "#3DB876",
