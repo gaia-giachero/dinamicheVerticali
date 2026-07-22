@@ -29,7 +29,8 @@
   <meta property="og:description"
     content="Centro di formazione certificato PTI Italy a Torino: corsi per lavori in quota, spazi confinati, IRATA e sicurezza sul lavoro. Consulta il calendario e iscriviti online." />
   <!-- immagine dedicata 1200x630px, non solo il logo -->
-  <meta property="og:image" content="https://www.dinamicheverticali-formazione.it/public/img/logo-dinamiche-verticali-formazione.svg" />
+  <meta property="og:image"
+    content="https://www.dinamicheverticali-formazione.it/public/img/logo-dinamiche-verticali-formazione.svg" />
   <meta property="og:locale" content="it_IT" />
 
   <!-- X (Twitter) -->
@@ -38,7 +39,8 @@
   <meta name="twitter:title" content="Corsi Sicurezza sul Lavoro Torino | Dinamiche Verticali PTI Italy" />
   <meta name="twitter:description"
     content="Centro di formazione certificato PTI Italy a Torino: corsi per lavori in quota, spazi confinati, IRATA e sicurezza sul lavoro. Consulta il calendario e iscriviti online." />
-  <meta name="twitter:image" content="https://www.dinamicheverticali-formazione.it/public/img/logo-dinamiche-verticali-formazione.svg" />
+  <meta name="twitter:image"
+    content="https://www.dinamicheverticali-formazione.it/public/img/logo-dinamiche-verticali-formazione.svg" />
 
   <!-- CALENDARIO -->
   <!-- STANDARD JS: defer per non bloccare il rendering della pagina -->
@@ -59,6 +61,7 @@
   <link rel="stylesheet" href="./assets/style/style-calendario.css">
   <link rel="stylesheet" href="./assets/style/style-carosello-home.css">
   <link rel="stylesheet" href="./assets/style/style-sezione-intro.css">
+  <link rel="stylesheet" href="./assets/style/style-in-evidenza.css">
 
 </head>
 
@@ -67,7 +70,8 @@
   <!-- ============ NAVBAR ============ -->
   <nav id="navbar">
     <a href="/index.html">
-      <img src="./public/img/logo-dinamiche-verticali-formazione.svg" alt="Dinamiche Verticali Formazione" width="150" />
+      <img src="./public/img/logo-dinamiche-verticali-formazione.svg" alt="Dinamiche Verticali Formazione"
+        width="150" />
     </a>
 
     <!-- HAMBURGER BUTTON (mobile) -->
@@ -121,15 +125,15 @@
     <div class="carosello" data-autoplay="5000">
       <div class="carosello-track">
         <div class="carosello-slide">
-          <img src="./public/img/carosello_home/centro-struttura-con-passatoia.avif"
+          <img src="./public/img/carosello_home/centro-struttura-con-passatoia.jpg"
             alt="Struttura del centro di formazione con passatoia" fetchpriority="high" />
         </div>
         <div class="carosello-slide">
-          <img src="./public/img/carosello_home/capannone-ponteggio-dal-basso.avif"
+          <img src="./public/img/carosello_home/capannone-ponteggio-dal-basso.jpg"
             alt="Capannone con ponteggio visto dal basso" loading="lazy" />
         </div>
         <div class="carosello-slide">
-          <img src="./public/img/carosello_home/centro-caschi.avif"
+          <img src="./public/img/carosello_home/centro-caschi.jpg"
             alt="Caschi da lavoro esposti nel centro di formazione" loading="lazy" />
         </div>
       </div>
@@ -142,7 +146,7 @@
 
     <!-- ============ CAMPO RICERCA (statico, senza logica) ============ -->
     <div class="campo-ricerca">
-      <input type="text" class="input" placeholder="Cerca" />
+      <input type="text" class="input" placeholder="Cerca il corso che fa al caso tuo" />
     </div>
 
     <!-- ============ FLITRI CORSI + CALENDARIO ============ -->
@@ -164,6 +168,106 @@
       </div>
 
     </div>
+
+    <!-- ============ SEZIONE IN EVIDENZA ============ -->
+    <section class="in-evidenza">
+      <div class="in-evidenza-header">
+        <h2 class="in-evidenza-titolo">In Evidenza</h2>
+        <a href="#!" class="in-evidenza-link">Tutti i corsi →</a>
+      </div>
+
+      <div class="in-evidenza-grid">
+        <!-- ============ PRIMA RIGA: ACCESSO SU FUNE ============ -->
+        <article class="corso-card cat-quota">
+          <div class="corso-card-img">
+            <img src="./public/img/corsi/accesso-su-fune.jpg"
+              alt="Operatore in fase di accesso su fune durante un intervento in quota" loading="lazy" />
+            <span class="corso-card-pallino" aria-hidden="true"></span>
+          </div>
+          <div class="corso-card-dati">
+            <span class="corso-card-tag" aria-hidden="true"></span>
+            <h3 class="corso-card-titolo">Accesso su fune</h3>
+            <p class="corso-card-testo">Formazione completa per operatori di accesso su fune secondo le norme IRATA e
+              UNI EN 13460.</p>
+            <a href="#!" class="corso-card-link">Iscriviti →</a>
+          </div>
+        </article>
+
+        <article class="corso-card cat-gwo">
+          <div class="corso-card-img">
+            <img src="./public/img/corsi/accesso-su-fune.jpg"
+              alt="Operatore in fase di accesso su fune durante un intervento in quota" loading="lazy" />
+            <span class="corso-card-pallino" aria-hidden="true"></span>
+          </div>
+          <div class="corso-card-dati">
+            <span class="corso-card-tag" aria-hidden="true"></span>
+            <h3 class="corso-card-titolo">Accesso su fune</h3>
+            <p class="corso-card-testo">Formazione completa per operatori di accesso su fune secondo le norme IRATA e
+              UNI EN 13460.</p>
+            <a href="#!" class="corso-card-link">Iscriviti →</a>
+          </div>
+        </article>
+
+        <article class="corso-card cat-accreditati">
+          <div class="corso-card-img">
+            <img src="./public/img/corsi/accesso-su-fune.jpg"
+              alt="Operatore in fase di accesso su fune durante un intervento in quota" loading="lazy" />
+            <span class="corso-card-pallino" aria-hidden="true"></span>
+          </div>
+          <div class="corso-card-dati">
+            <span class="corso-card-tag" aria-hidden="true"></span>
+            <h3 class="corso-card-titolo">Accesso su fune</h3>
+            <p class="corso-card-testo">Formazione completa per operatori di accesso su fune secondo le norme IRATA e
+              UNI EN 13460.</p>
+            <a href="#!" class="corso-card-link">Iscriviti →</a>
+          </div>
+        </article>
+
+        <!-- ============ SECONDA RIGA: LAVORI IN ALTURA ============ -->
+        <article class="corso-card">
+          <div class="corso-card-img">
+            <img src="./public/img/corsi/lavori-in-altura.jpg"
+              alt="Alpinista durante un'attività di lavoro in quota su terreno innevato" loading="lazy" />
+          </div>
+          <div class="corso-card-dati">
+            <span class="corso-card-tag" aria-hidden="true"></span>
+            <h3 class="corso-card-titolo">Lavori in altura</h3>
+            <p class="corso-card-testo">Formazione obbligatoria per la sicurezza nei cantieri e ambienti di lavoro in
+              quota.</p>
+            <a href="#!" class="corso-card-link">Iscriviti →</a>
+          </div>
+        </article>
+
+        <article class="corso-card cat-fune">
+          <div class="corso-card-img">
+            <img src="./public/img/corsi/lavori-in-altura.jpg"
+              alt="Alpinista durante un'attività di lavoro in quota su terreno innevato" loading="lazy" />
+            <span class="corso-card-pallino" aria-hidden="true"></span>
+          </div>
+          <div class="corso-card-dati">
+            <span class="corso-card-tag" aria-hidden="true"></span>
+            <h3 class="corso-card-titolo">Lavori in altura</h3>
+            <p class="corso-card-testo">Formazione obbligatoria per la sicurezza nei cantieri e ambienti di lavoro in
+              quota.</p>
+            <a href="#!" class="corso-card-link">Iscriviti →</a>
+          </div>
+        </article>
+
+        <article class="corso-card">
+          <div class="corso-card-img">
+            <img src="./public/img/corsi/lavori-in-altura.jpg"
+              alt="Alpinista durante un'attività di lavoro in quota su terreno innevato" loading="lazy" />
+          </div>
+          <div class="corso-card-dati">
+            <span class="corso-card-tag" aria-hidden="true"></span>
+            <h3 class="corso-card-titolo">Lavori in altura</h3>
+            <p class="corso-card-testo">Formazione obbligatoria per la sicurezza nei cantieri e ambienti di lavoro in
+              quota.</p>
+            <a href="#!" class="corso-card-link">Iscriviti →</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <!-- ============ NEWSLETTER + SEZIONE INTRODUTTIVA ============ -->
     <!-- ============ NEWSLETTER ============ -->
@@ -214,7 +318,8 @@
           <li>Formazione IRATA</li>
           <li>Formazione GWO</li>
         </ul>
-        <p>Vi aspettiamo nel nostro centro per condividere la nostra passione per il lavoro in quota e la formazione.</p>
+        <p>Vi aspettiamo nel nostro centro per condividere la nostra passione per il lavoro in quota e la formazione.
+        </p>
       </div>
 
       <div class="sezione-intro-firma">
