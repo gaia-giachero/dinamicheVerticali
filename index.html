@@ -4,23 +4,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sito Formazione</title>
 
-  <!-- SEO: da aggiungere -->
-  <!-- STANDARD JS -->
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.0.1/all/global.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.0.1/locales/it/global.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.0.1/themes/monarch/global.js"></script>
+  <!-- FAVICON -->
+  <link rel="icon" href="./public/img/favicon.ico" sizes="any" />
+  <link rel="icon" href="./public/img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./public/img/apple-touch-icon.png" />
+
+  <!-- Per adesso URL inventato, nella realtà ci sarebbe l'URL reale 
+        (per far capire al motore di ricerca che questa è la pagina da indicizzare) -->
+  <link rel="canonical" href="https://www.dinamicheverticali-formazione.it/" />
+
+  <!-- META TAGS PRINCIPALI -->
+  <title>Corsi Sicurezza sul Lavoro Torino | Dinamiche Verticali PTI Italy</title>
+  <meta name="title" content="Corsi Sicurezza sul Lavoro Torino | Dinamiche Verticali PTI Italy" />
+  <meta name="description"
+    content="Centro di formazione certificato PTI Italy a Torino: corsi per lavori in quota, spazi confinati, IRATA e sicurezza sul lavoro. Consulta il calendario e iscriviti online." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dinamiche Verticali Formazione" />
+  <!-- Per adesso URL inventato, nella realtà ci sarebbe l'URL reale -->
+  <meta property="og:url" content="https://www.dinamicheverticali-formazione.it/" />
+  <meta property="og:title" content="Corsi Sicurezza sul Lavoro Torino | Dinamiche Verticali PTI Italy" />
+  <meta property="og:description"
+    content="Centro di formazione certificato PTI Italy a Torino: corsi per lavori in quota, spazi confinati, IRATA e sicurezza sul lavoro. Consulta il calendario e iscriviti online." />
+  <!-- immagine dedicata 1200x630px, non solo il logo -->
+  <meta property="og:image" content="https://www.dinamicheverticali-formazione.it/public/img/logo-dinamiche-verticali-formazione.svg" />
+  <meta property="og:locale" content="it_IT" />
+
+  <!-- X (Twitter) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.dinamicheverticali-formazione.it/" />
+  <meta name="twitter:title" content="Corsi Sicurezza sul Lavoro Torino | Dinamiche Verticali PTI Italy" />
+  <meta name="twitter:description"
+    content="Centro di formazione certificato PTI Italy a Torino: corsi per lavori in quota, spazi confinati, IRATA e sicurezza sul lavoro. Consulta il calendario e iscriviti online." />
+  <meta name="twitter:image" content="https://www.dinamicheverticali-formazione.it/public/img/logo-dinamiche-verticali-formazione.svg" />
+
+  <!-- CALENDARIO -->
+  <!-- STANDARD JS: defer per non bloccare il rendering della pagina -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.0.1/all/global.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.0.1/locales/it/global.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.0.1/themes/monarch/global.js" defer></script>
 
   <!-- STYLESHEETS -->
   <link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.1/skeleton.css' rel='stylesheet' />
   <link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.1/themes/monarch/theme.css' rel='stylesheet' />
   <link href='https://cdn.jsdelivr.net/npm/fullcalendar@7.0.1/themes/monarch/palettes/purple.css' rel='stylesheet' />
 
+  <!-- STYLESHEETS -->
   <link rel="stylesheet" href="./assets/style/style-navbar.css">
   <link rel="stylesheet" href="./assets/style/style-campo-ricerca.css">
   <link rel="stylesheet" href="./assets/style/style-carosello.css">
-  <link rel="stylesheet" href="./assets/style/style-pillar-page.css">
   <link rel="stylesheet" href="./assets/style/style-footer.css">
   <link rel="stylesheet" href="./assets/style/style-calendario.css">
   <link rel="stylesheet" href="./assets/style/style-carosello-home.css">
@@ -28,195 +62,195 @@
 
 </head>
 
-<!-- ============ NAVBAR ============ -->
-<nav id="navbar">
-  <a href="/index.html">
-    <img src="./public/img/logo-dinamiche-verticali-formazione.svg" alt="Dinamiche Verticali Formazione" width="150" />
-  </a>
+<body>
 
-  <!-- HAMBURGER BUTTON (mobile) -->
-  <button class="hamburger" aria-label="Apri menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar">
+    <a href="/index.html">
+      <img src="./public/img/logo-dinamiche-verticali-formazione.svg" alt="Dinamiche Verticali Formazione" width="150" />
+    </a>
 
-  <ul class="menu">
-    <!-- HOME -->
-    <li class="active">
-      <a href="/index.html">HOME</a>
-    </li>
+    <!-- HAMBURGER BUTTON (mobile) -->
+    <button class="hamburger" aria-label="Apri menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    <!-- CERTIFICAZIONI -->
-    <li class="dropdown">
-      <span>CERTIFICAZIONI ⌵</span>
-      <ul class="dropdown-menu">
-        <li><a href="./pages/corsi/irata.html">IRATA</a></li>
-        <li><a href="#!">GWO</a></li>
-        <li><a href="#!">PTI</a></li>
-      </ul>
-    </li>
+    <ul class="menu">
+      <!-- HOME -->
+      <li class="active">
+        <a href="/index.html">HOME</a>
+      </li>
 
-    <!-- ALTRI CORSI -->
-    <li class="dropdown">
-      <span>ALTRI CORSI ⌵</span>
-      <ul class="dropdown-menu">
-        <li><a href="#!">FUNE D.LGS. 81/08</a></li>
-        <li><a href="#!">LAVORI IN QUOTA</a></li>
-        <li><a href="#!">SOCCORSO</a></li>
-        <li><a href="#!">CORSI ACCREDITATI</a></li>
-      </ul>
-    </li>
+      <!-- CERTIFICAZIONI -->
+      <li class="dropdown">
+        <span>CERTIFICAZIONI ⌵</span>
+        <ul class="dropdown-menu">
+          <li><a href="./pages/corsi/irata.html">IRATA</a></li>
+          <li><a href="#!">GWO</a></li>
+          <li><a href="#!">PTI</a></li>
+        </ul>
+      </li>
 
-    <!-- NEWS -->
-    <li>
-      <a href="./pages/news.html">NEWS</a>
-    </li>
+      <!-- ALTRI CORSI -->
+      <li class="dropdown">
+        <span>ALTRI CORSI ⌵</span>
+        <ul class="dropdown-menu">
+          <li><a href="#!">FUNE D.LGS. 81/08</a></li>
+          <li><a href="#!">LAVORI IN QUOTA</a></li>
+          <li><a href="#!">SOCCORSO</a></li>
+          <li><a href="#!">CORSI ACCREDITATI</a></li>
+        </ul>
+      </li>
 
-    <!-- CONTATTI -->
-    <li>
-      <a href="#!">CONTATTI</a>
-    </li>
-  </ul>
-</nav>
+      <!-- NEWS -->
+      <li>
+        <a href="./pages/news.html">NEWS</a>
+      </li>
 
-<main>
-  <!-- ============ CAROSELLO HERO ============ -->
-  <div class="carosello" data-autoplay="5000">
-    <div class="carosello-track">
-      <div class="carosello-slide">
-        <img src="./public/img/carosello_home/centro-struttura-con-passatoia.avif"
-          alt="Struttura del centro di formazione con passatoia" loading="lazy" />
+      <!-- CONTATTI -->
+      <li>
+        <a href="#!">CONTATTI</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ============ CAROSELLO HOME ============ -->
+    <div class="carosello" data-autoplay="5000">
+      <div class="carosello-track">
+        <div class="carosello-slide">
+          <img src="./public/img/carosello_home/centro-struttura-con-passatoia.avif"
+            alt="Struttura del centro di formazione con passatoia" fetchpriority="high" />
+        </div>
+        <div class="carosello-slide">
+          <img src="./public/img/carosello_home/capannone-ponteggio-dal-basso.avif"
+            alt="Capannone con ponteggio visto dal basso" loading="lazy" />
+        </div>
+        <div class="carosello-slide">
+          <img src="./public/img/carosello_home/centro-caschi.avif"
+            alt="Caschi da lavoro esposti nel centro di formazione" loading="lazy" />
+        </div>
       </div>
-      <div class="carosello-slide">
-        <img src="./public/img/carosello_home/capannone-ponteggio-dal-basso.avif"
-          alt="Capannone con ponteggio visto dal basso" loading="lazy" />
+
+      <button type="button" class="carosello-freccia carosello-prev" aria-label="Immagine precedente">‹</button>
+      <button type="button" class="carosello-freccia carosello-next" aria-label="Immagine successiva">›</button>
+
+      <div class="carosello-dots"></div>
+    </div>
+
+    <!-- ============ CAMPO RICERCA (statico, senza logica) ============ -->
+    <div class="campo-ricerca">
+      <input type="text" class="input" placeholder="Cerca" />
+    </div>
+
+    <!-- ============ FLITRI CORSI + CALENDARIO ============ -->
+    <div class="calendario-sezione">
+
+      <!-- blocco filtri su desktop generato da js -->
+      <div id="filtri-slot-desktop"></div>
+
+      <div class="calendario-box">
+        <h2 class="calendario-titolo">Calendario prossimi corsi</h2>
+
+        <!-- blocco filtri su mobile generato da js -->
+        <div id="filtri-slot-mobile"></div>
+
+        <p class="calendario-sottotitolo">
+          Attualmente ci sono <span id="conteggio-corsi">–</span> corsi in programma nel nostro centro
+        </p>
+        <div id="calendar"></div>
       </div>
-      <div class="carosello-slide">
-        <img src="./public/img/carosello_home/centro-caschi.avif"
-          alt="Caschi da lavoro esposti nel centro di formazione" loading="lazy" />
+
+    </div>
+
+    <!-- ============ NEWSLETTER + SEZIONE INTRODUTTIVA ============ -->
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="newsletter-banner">
+      <p class="newsletter-testo">
+        Per rimanere aggiornato iscriviti<br />
+        Alla Newsletter
+      </p>
+      <button type="button" class="newsletter-btn">Iscriviti</button>
+    </section>
+
+    <!-- ============ SEZIONE INTRODUTTIVA ============ -->
+    <section class="sezione-intro">
+      <h1 class="sezione-intro-titolo">Dinamiche Verticali Formazione PTI Italy</h1>
+      <p class="sezione-intro-sottotitolo">L'unico ed esclusivo Petzl Technical Institute (PTI).</p>
+
+      <div class="sezione-intro-testo">
+        <p>
+          Attivo sul territorio nazionale, è abilitato e certificato per la distribuzione dei moduli
+          "Petzl Solution", il centro partecipa attivamente allo sviluppo dei moduli ed è
+          responsabile, per la propria area di competenza, dello sviluppo, gestione e supporto
+          della rete di partner tecnici definiti "Petzl Technical Partners".
+        </p>
+        <p>La formazione teorico-pratica della rete vendita nazionale è il core-business del PTI Italia.</p>
+        <p>
+          L'obiettivo finale è rendere la nostra rete vendita un interlocutore qualificato, che
+          fornisca risposte pertinenti e consulenze tecniche funzionali per soddisfare le
+          differenti esigenze dei nostri utilizzatori finali.
+        </p>
+        <p>Mettiamo a disposizione dei nostri Rivenditori:</p>
+        <ul>
+          <li>corsi di approfondimento per la conoscenza di normative, tecniche di lavoro in quota e conoscenza della
+            gamma anticaduta professionale Petzl.</li>
+          <li>corsi specifici per utilizzatori finali, erogati in funzione dell'acquisto di prodotti quali: Exo, Lezard,
+            Jag Rescue kit, etc...</li>
+          <li>formazione teorico pratica all'ispezione periodica dei DPI di III categoria, unitamente ai relativi
+            aggiornamenti.</li>
+        </ul>
+        <p>
+          Ma Dinamiche Verticali Formazione srl è anche un centro di formazione certificato IRATA,
+          GWO, che vanta la collaborazione con docenti altamente qualificati e formati per erogare
+          le formazioni specifiche per:
+        </p>
+        <ul>
+          <li>Lavori in altezza</li>
+          <li>Spazi confinati</li>
+          <li>Soccorso</li>
+          <li>Formazione IRATA</li>
+          <li>Formazione GWO</li>
+        </ul>
+        <p>Vi aspettiamo nel nostro centro per condividere la nostra passione per il lavoro in quota e la formazione.</p>
+      </div>
+
+      <div class="sezione-intro-firma">
+        <p>Christian Bianchi</p>
+        <p>Direttore Tecnico Petzl Italia</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer">
+    <div class="firstSection">
+      <img src="./public/img/privacy&policy.svg" alt="Privacy e Policy" loading="lazy" />
+      <div class="contatti">
+        <p>Contattaci</p>
+        <p>+39 011 27 32 500</p>
+        <p>(Lun-Ven dalle 08:30 alle 17:30)</p>
+        <p>formazione@petzl.it</p>
+        <p>Via G. Battista Feroggio, 54, 10151 Torino</p>
       </div>
     </div>
+    <img src="./public/img/aziende.svg" alt="Loghi partner e certificazioni: Petzl, IRATA, GWO" loading="lazy" />
+  </footer>
 
-    <button type="button" class="carosello-freccia carosello-prev" aria-label="Immagine precedente">‹</button>
-    <button type="button" class="carosello-freccia carosello-next" aria-label="Immagine successiva">›</button>
+  <!-- JS per l'interazione della navbar (hamburger, dropdown) -->
+  <script type="module" src="./assets/js/navbar.js"></script>
 
-    <div class="carosello-dots"></div>
-  </div>
+  <!-- Carosello -->
+  <script src="./assets/js/carosello-home.js"></script>
 
-  <!-- <img src="./public/img/aziende.svg" alt="aziende"> -->
+  <!-- Calendario -->
+  <script src="./assets/js/calendario.js"></script>
 
-  <!-- ============ CAMPO RICERCA (statico, senza logica per adesso) ============ -->
-  <div class="campo-ricerca">
-    <input type="text" class="input" placeholder="Cerca" />
-  </div>
-
-  <!-- ============ FLITRI CORSI + CALENDARIO ============ -->
-  <div class="calendario-sezione">
-
-    <!-- segnaposto: qui va il blocco filtri su desktop -->
-    <div id="filtri-slot-desktop"></div>
-
-    <div class="calendario-box">
-      <h2 class="calendario-titolo">Calendario prossimi corsi</h2>
-
-      <!-- segnaposto: qui va il blocco filtri su mobile -->
-      <div id="filtri-slot-mobile"></div>
-
-      <p class="calendario-sottotitolo">
-        Attualmente ci sono <span id="conteggio-corsi">–</span> corsi in programma nel nostro centro
-      </p>
-      <div id="calendar"></div>
-    </div>
-
-  </div>
-
-  <!-- ============ NEWSLETTER + PRESENTAZIONE ============ -->
-  <!-- ============ NEWSLETTER ============ -->
-  <section class="newsletter-banner">
-    <p class="newsletter-testo">
-      Per rimanere aggiornato iscriviti<br />
-      Alla Newsletter
-    </p>
-    <button type="button" class="newsletter-btn">Iscriviti</button>
-  </section>
-
-  <!-- ============ SEZIONE INTRODUTTIVA PTI ============ -->
-  <section class="sezione-intro">
-    <h1 class="sezione-intro-titolo">Dinamiche Verticali Formazione PTI Italy</h1>
-    <p class="sezione-intro-sottotitolo">L'unico ed esclusivo Petzl Technical Institute (PTI).</p>
-
-    <div class="sezione-intro-testo">
-      <p>
-        Attivo sul territorio nazionale, è abilitato e certificato per la distribuzione dei moduli
-        "Petzl Solution", il centro partecipa attivamente allo sviluppo dei moduli ed è
-        responsabile, per la propria area di competenza, dello sviluppo, gestione e supporto
-        della rete di partner tecnici definiti "Petzl Technical Partners".
-      </p>
-      <p>La formazione teorico-pratica della rete vendita nazionale è il core-business del PTI Italia.</p>
-      <p>
-        L'obiettivo finale è rendere la nostra rete vendita un interlocutore qualificato, che
-        fornisca risposte pertinenti e consulenze tecniche funzionali per soddisfare le
-        differenti esigenze dei nostri utilizzatori finali.
-      </p>
-      <p>Mettiamo a disposizione dei nostri Rivenditori:</p>
-      <ul>
-        <li>corsi di approfondimento per la conoscenza di normative, tecniche di lavoro in quota e conoscenza della
-          gamma anticaduta professionale Petzl.</li>
-        <li>corsi specifici per utilizzatori finali, erogati in funzione dell'acquisto di prodotti quali: Exo, Lezard,
-          Jag Rescue kit, etc...</li>
-        <li>formazione teorico pratica all'ispezione periodica dei DPI di III categoria, unitamente ai relativi
-          aggiornamenti.</li>
-      </ul>
-      <p>
-        Ma Dinamiche Verticali Formazione srl è anche un centro di formazione certificato IRATA,
-        GWO, che vanta la collaborazione con docenti altamente qualificati e formati per erogare
-        le formazioni specifiche per:
-      </p>
-      <ul>
-        <li>Lavori in altezza</li>
-        <li>Spazi confinati</li>
-        <li>Soccorso</li>
-        <li>Formazione IRATA</li>
-        <li>Formazione GWO</li>
-      </ul>
-      <p>Vi aspettiamo nel nostro centro per condividere la nostra passione per il lavoro in quota e la formazione.</p>
-    </div>
-
-    <div class="sezione-intro-firma">
-      <p>Christian Bianchi</p>
-      <p>Direttore Tecnico Petzl Italia</p>
-    </div>
-  </section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer id="footer">
-  <div class="firstSection">
-    <img src="./public/img/privacy&policy.svg" alt="Dinamiche Verticali Formazione" loading="lazy" />
-    <div class="contatti">
-      <p>Contattaci</p>
-      <p>+39 011 27 32 500</p>
-      <p>(Lun-Ven dalle 08:30 alle 17:30)</p>
-      <p>formazione@petzl.it</p>
-      <p>Via G. Battista Feroggio, 54, 10151 Torino</p>
-    </div>
-  </div>
-  <img src="./public/img/aziende.svg" alt="petzl, irata, gwo" loading="lazy" />
-</footer>
-
-<!-- JS per l'interazione della navbar (hamburger, dropdown) -->
-<script type="module" src="./assets/js/navbar.js"></script>
-
-<!-- Carosello -->
-<script src="./assets/js/carosello-home.js"></script>
-
-<!-- Calendario -->
-<script src="./assets/js/calendario.js"></script>
-
-<!-- React solo per il carosello -->
-<script type="module" src="./src/main.jsx"></script>
+  <!-- React solo per il carosello -->
+  <script type="module" src="./src/main.jsx"></script>
 </body>
 
 </html>
